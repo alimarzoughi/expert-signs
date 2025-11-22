@@ -1,10 +1,22 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY
+
+    // ---- ADD THIS GUARD ----
+    if (!apiKey) {
+      console.error("Missing RESEND_API_KEY")
+      return NextResponse.json(
+        { ok: false, error: "Email service not configured" },
+        { status: 500 }
+      )
+    }
+
+    const resend = new Resend(apiKey)
+    // -------------------------
+
     const { name, email, phone, company, projectType, message } = await req.json()
 
     await resend.emails.send({
@@ -27,6 +39,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true })
   } catch (error) {
     console.error("Error sending quote email:", error)
-    return NextResponse.json({ ok: false, error: "Failed to send email" }, { status: 500 })
+    return NextResponse.json(
+      { ok: false, error: "Failed to send email" },
+      { status: 500 }
+    )
   }
 }
