@@ -35,7 +35,7 @@ export function Navigation() {
               Gallery
             </Link>
             <Link href="/#request-form">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-background">
+              <Button className="bg-accent hover:bg-primary text-accent-background hover:text-primary-foreground">
                 Get a Quote
               </Button>
             </Link>
@@ -73,7 +73,7 @@ export function Navigation() {
                 Gallery
               </Link>
               <Link href="/#request-form" onClick={() => setIsMenuOpen(false)}>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-background w-full">
+                <Button className="bg-accent hover:bg-primary text-accent-background hover:text-primary-foreground w-full">
                   Get a Quote
                 </Button>
               </Link>

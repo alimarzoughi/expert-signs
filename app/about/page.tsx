@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-balance">
@@ -56,7 +56,7 @@ export default function AboutPage() {
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
-                <Target className="w-12 h-12 text-accent mx-auto mb-4" />
+                <Target className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-serif font-bold mb-3">Precision</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Every detail matters. We bring precision engineering and meticulous attention to detail to create
@@ -76,7 +76,7 @@ export default function AboutPage() {
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
-                <Heart className="w-12 h-12 text-accent mx-auto mb-4" />
+                <Heart className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-serif font-bold mb-3">Excellence</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   We're passionate about delivering exceptional results that exceed expectations and stand the test of
@@ -92,7 +92,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-accent text-accent-foreground p-12 rounded-lg">
+            <div className="bg-muted text-accent-foreground p-12 rounded-lg">
               <h2 className="text-4xl font-serif font-bold mb-6 text-balance">
                 Licensed, Insured, and Committed to Safety
               </h2>
@@ -117,8 +117,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What We Do */}
-      <section className="py-20 bg-secondary">
+      {/* Our Services */}
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-serif font-bold text-center mb-12 text-balance">Our Services</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

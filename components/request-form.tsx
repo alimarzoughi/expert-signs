@@ -131,7 +131,7 @@ export default function RequestForm() {
           <Button
             type="submit"
             size="lg"
-            className="w-full text-lg bg-secondary text-secondary-foreground"
+            className="w-full text-lg bg-secondary text-secondary-foreground hover:bg-secondary/80"
             disabled={status === "loading"}
           >
             {status === "loading" ? "Sending..." : "Submit Request"}

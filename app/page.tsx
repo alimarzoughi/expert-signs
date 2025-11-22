@@ -7,6 +7,7 @@ import FeaturedSlideshow from "@/components/featured-slideshow"
 import SocialShowcase from "@/components/social-showcase"
 import BrandCarousel from "@/components/brand-carousel"
 import RequestForm from "@/components/request-form"
+import Testimonials from "@/components/testimonials"
 
 export default function HomePage() {
   return (
@@ -26,7 +27,7 @@ export default function HomePage() {
         <div className="py-8 text-center">
           <Button
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-canavar text-lg px-8"
+            className="bg-accent hover:bg-accent/80 text-accent-foreground font-canavar text-lg px-8"
             onClick={() => document.getElementById("request-form")?.scrollIntoView({ behavior: "smooth" })}
           >
             Request a Quote Today!
@@ -99,6 +100,9 @@ export default function HomePage() {
           <FeaturedSlideshow />
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials/>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-muted">
