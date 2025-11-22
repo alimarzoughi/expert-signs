@@ -18,7 +18,7 @@ const featuredImages = [
   "/signs/search-wireless.jpg", // added extension
 ]
 
-export function FeaturedSlideshow() {
+export default function FeaturedSlideshow() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const whooshRef = useRef<HTMLAudioElement | null>(null)
 

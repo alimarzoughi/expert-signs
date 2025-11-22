@@ -23,7 +23,7 @@ export default function GalleryPage() {
     string,
     { extraClass?: string; objectPosition?: string }
   > = {
-    // 👉 Replace these keys with your real filenames from /public/signs
+    // Replace these keys with real filenames from /public/signs
     "/signs/3d-home-center.jpg": {
       extraClass: "scale-90",
       objectPosition: "center center",
@@ -33,8 +33,7 @@ export default function GalleryPage() {
       objectPosition: "center top",
     },
     "/signs/capital-one.jpg": {
-      extraClass: "scale-110",
-      objectPosition: "left center",
+      objectPosition: "left center"
     },
   }
 
@@ -44,7 +43,7 @@ export default function GalleryPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-balance">
+            <h1 className="font-serif text-6xl md:text-7xl font-bold mb-6 text-balance">
               Our Portfolio
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed text-pretty">

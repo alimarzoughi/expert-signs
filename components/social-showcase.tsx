@@ -1,5 +1,5 @@
-export function SocialShowcase() {
-  // Replace these with your actual YouTube and TikTok links
+export default function SocialShowcase() {
+  // Replace these with actual YouTube and TikTok links
   const youtubeLink = "YOUR_YOUTUBE_CHANNEL_OR_VIDEO_URL"
   const tiktokLink = "YOUR_TIKTOK_PROFILE_URL"
 

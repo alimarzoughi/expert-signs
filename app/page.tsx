@@ -1,9 +1,12 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { FeaturedSlideshow } from "@/components/featured-slideshow"
-import { SocialShowcase } from "@/components/social-showcase"
+import FeaturedSlideshow from "@/components/featured-slideshow"
+import SocialShowcase from "@/components/social-showcase"
 import BrandCarousel from "@/components/brand-carousel"
+import RequestForm from "@/components/request-form"
 
 export default function HomePage() {
   return (
@@ -21,7 +24,11 @@ export default function HomePage() {
           />
         </div>
         <div className="py-8 text-center">
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-canavar text-lg px-8">
+          <Button
+            size="lg"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground font-canavar text-lg px-8"
+            onClick={() => document.getElementById("request-form")?.scrollIntoView({ behavior: "smooth" })}
+          >
             Request a Quote Today!
           </Button>
         </div>
@@ -133,16 +140,19 @@ export default function HomePage() {
       {/* Social Media Showcase */}
       <SocialShowcase/>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-muted text-accent-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-balance">Ready to Elevate Your Brand?</h2>
-          <p className="text-xl mb-8 text-accent-foreground/90 max-w-2xl mx-auto text-pretty leading-relaxed">
-            Let's create signage that makes a lasting impression. Get your free consultation today.
-          </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8">
-            Get Started
-          </Button>
+      {/* Request Section */}
+      <section id="request-form" className="py-20 bg-muted text-accent-foreground">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-balance text-center">
+              Ready to Elevate Your Brand?
+            </h2>
+            <p className="text-xl mb-8 text-accent-foreground/90 text-center text-pretty leading-relaxed">
+              Let&apos;s create signage that makes a lasting impression. Submit your request today.
+            </p>
+
+            <RequestForm />
+          </div>
         </div>
       </section>
     </main>
